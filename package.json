@@ -1,8 +1,20 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/jefim9413/ignite-fundamentos-nodejs.git",
-  "author": "Jefferson Marques <jefferson.jsm3444@gmail.com>",
-  "license": "MIT"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefim9413/ignite-fundamentos-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jefim9413/ignite-fundamentos-nodejs/issues"
+  },
+  "homepage": "https://github.com/jefim9413/ignite-fundamentos-nodejs#readme"
 }

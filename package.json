@@ -17,5 +17,7 @@
   "bugs": {
     "url": "https://github.com/jefim9413/ignite-fundamentos-nodejs/issues"
   },
-  "homepage": "https://github.com/jefim9413/ignite-fundamentos-nodejs#readme"
+  "homepage": "https://github.com/jefim9413/ignite-fundamentos-nodejs#readme",
+  "dependencies": {
+  }
 }

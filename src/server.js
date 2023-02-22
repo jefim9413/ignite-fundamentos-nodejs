@@ -14,7 +14,7 @@ const server = http.createServer(async (req, res) => {
  
 
   if(route){
-    return route.handler(req, res)
+    return route.handler(req, res) 
   }
   return res.writeHead(404).end()
 })

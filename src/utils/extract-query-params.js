@@ -6,4 +6,4 @@ export function extractQueryParams(query) {
   
       return queryParams
     }, {})
-}
+  }

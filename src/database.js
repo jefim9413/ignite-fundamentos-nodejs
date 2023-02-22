@@ -1,7 +1,10 @@
 import fs from 'node:fs/promises'
+
 const databasePath = new URL('../db.json', import.meta.url)
+
 export class Database {
   #database = {}
+
   constructor() {
     fs.readFile(databasePath, 'utf8')
       .then(data => {
@@ -11,20 +14,34 @@ export class Database {
         this.#persist()
       })
   }
+
   #persist() {
     fs.writeFile(databasePath, JSON.stringify(this.#database))
   }
-  select(table) {
-    const data = this.#database[table] ?? []
+
+  select(table, search) {
+    let data = this.#database[table] ?? []
+
+    if (search) {
+      data = data.filter(row => {
+        return Object.entries(search).some(([key, value]) => {
+          return row[key].toLowerCase().includes(value.toLowerCase())
+        })
+      })
+    }
+
     return data
   }
+
   insert(table, data) {
     if (Array.isArray(this.#database[table])) {
       this.#database[table].push(data)
     } else {
       this.#database[table] = [data]
     }
+
     this.#persist()
+
     return data
   }
 
